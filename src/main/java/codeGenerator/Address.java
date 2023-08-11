@@ -5,9 +5,9 @@ package codeGenerator;
  */
 
 public class Address {
-    public int num;
-    public TypeAddress typeAddress;
-    public varType varType;
+    private final int num;
+    private final TypeAddress typeAddress;
+    private final varType varType;
 
     public Address(int num, varType varType, TypeAddress typeAddress) {
         this.num = num;
@@ -22,6 +22,18 @@ public class Address {
     }
 
     public String toString() {
-        return typeAddress.toString(num);
+        return getTypeAddress().toString(num);
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public TypeAddress getTypeAddress() {
+        return typeAddress;
+    }
+
+    public varType getVarType() {
+        return varType;
     }
 }
