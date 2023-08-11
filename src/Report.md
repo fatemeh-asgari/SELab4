@@ -42,3 +42,47 @@
 <img width="1351" alt="Screenshot 1402-05-20 at 20 20 40" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/8e882470-7212-42dd-9814-d1e15407c4c0">
 
 سپس در فایل‌های دیگر هم تغییرات لازم اعمال شده است:
+
+<img width="1065" alt="Screenshot 1402-05-20 at 22 47 17" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/6ce44ab5-21ec-4545-8359-5966c51d988a">
+
+<img width="1057" alt="Screenshot 1402-05-20 at 22 49 01" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/a37aa59b-72b0-4268-8c25-5354a112a17e">
+
+## جدا کردن query از modifier:
+این بازآرایی زمانی انجام می‌شود که متدی داریم که مقداری را برمی‌گرداند اما چیزی را در داخل یک شی نیز تغییر می‌دهد. این کار به این شکل انجام می‌شود که متد به دو متد جداگانه تقسیم می‌شود. همانطور که انتظار می‌رود، یکی از آن‌ها باید مقدار را برگرداند و دیگری شی را تغییر دهد. یک نمونه از این بازآرایی در کلاس Memory انجام شده است:
+
+<img width="1356" alt="Screenshot 1402-05-20 at 20 36 16" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/69446dfa-6cfd-41ce-952f-5215e96788b5">
+
+سپس در جاهای لازم در پروژه، تغییرات به این شکل اعمال شده است:
+
+<img width="1359" alt="Screenshot 1402-05-20 at 20 36 30" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/fb660d92-a69b-4872-9b7f-f1244bcf7862">
+
+## اعمال Self Encapsulate Field:
+این بازآرایی بیان می‌کند که نباید از دسترسی مستقیم به فیلدهای خصوصی در داخل یک کلاس استفاده کرد بلکه باید یک getter برای فیلد ایجاد کرد و فقط از آن برای دسترسی به فیلد استفاده کرد. یک نمونه از این بازآرایی در کلاس Address انجام شده است:
+
+<img width="1058" alt="Screenshot 1402-05-20 at 23 02 47" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/d35703c3-a7b2-4bcc-83d3-7aa1d5652d1f">
+
+سپس در جاهای لازم در پروژه، تغییرات اعمال شده است:
+
+<img width="1352" alt="Screenshot 1402-05-20 at 21 02 34" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/f0fa0f06-0cd8-40d4-b375-e6dc582df719">
+
+## استفاده از Polymorphism به جای شرط:
+این بازآرایی در بالاتر توضیح داده شده است. در اینجا یک نمونه‌ی دیگر از آن در کلاس Action اعمال شده است:
+
+<img width="1329" alt="Screenshot 1402-05-20 at 21 40 57" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/ef802a0b-9d6d-4cc1-bc7d-b1815ede6524">
+
+<img width="1335" alt="Screenshot 1402-05-20 at 21 41 13" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/159cbd26-58d3-4760-ae50-00b6a5d61b4d">
+
+سپس تغییرات لازم در پروژه اعمال شده است:
+
+<img width="1352" alt="Screenshot 1402-05-20 at 21 41 26" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/b3ca59e8-4e10-4fa7-a23b-c25d911c58b9">
+
+<img width="1352" alt="Screenshot 1402-05-20 at 21 42 23" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/2b88b530-522b-4787-a650-002767b8dfb6">
+
+## جدا کردن query از modifier:
+این بازآرایی که در بالاتر توضیح داده شد، یک بار دیگر در کلاس Memory انجام شده است و سپس تغییرات لازم در پروژه اعمال شده است:
+
+<img width="1060" alt="Screenshot 1402-05-20 at 23 11 00" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/7bc70383-4cac-4c01-a853-6f369ae7002e">
+
+<img width="1059" alt="Screenshot 1402-05-20 at 23 11 11" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/b6d544b8-0fbb-448f-915a-ea65b59e49fa">
+
+<img width="1061" alt="Screenshot 1402-05-20 at 23 11 25" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/988a8011-1d27-4976-bf74-1c2f6dd0e186">
