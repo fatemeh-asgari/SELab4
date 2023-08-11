@@ -1,29 +1,61 @@
 package parser;
 
-public class Action {
-    public act action;
-    //if action = shift : number is state
-    //if action = reduce : number is number of rule
-    public int number;
+public abstract class Action {
+    protected int number;
 
-    public Action(act action, int number) {
-        this.action = action;
+    public Action(int number) {
         this.number = number;
     }
 
+    public abstract String getActionType();
+
+    public abstract String toString();
+}
+
+class AcceptAction extends Action {
+    public AcceptAction(int number) {
+        super(number);
+    }
+
+    @Override
+    public String getActionType() {
+        return "ACCEPT";
+    }
+
+    @Override
     public String toString() {
-        switch (action) {
-            case accept:
-                return "acc";
-            case shift:
-                return "s" + number;
-            case reduce:
-                return "r" + number;
-        }
-        return action.toString() + number;
+        return "acc";
     }
 }
 
-enum act {
-    shift, reduce, accept
+class ShiftAction extends Action {
+    public ShiftAction(int number) {
+        super(number);
+    }
+
+    @Override
+    public String getActionType() {
+        return "SHIFT";
+    }
+
+    @Override
+    public String toString() {
+        return "s" + number;
+    }
+}
+
+class ReduceAction extends Action {
+    public ReduceAction(int number) {
+        super(number);
+    }
+
+    @Override
+    public String getActionType() {
+        return "REDUCE";
+    }
+
+    @Override
+    public String toString() {
+        return "r" + number;
+    }
 }
