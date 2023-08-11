@@ -7,17 +7,16 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 import Log.Log;
-import codeGenerator.CodeGenerator;
+import codeGenerator.CodeGeneratorFacade;
 import errorHandler.ErrorHandler;
 import scanner.lexicalAnalyzer;
 import scanner.token.Token;
 
 public class Parser {
-    private ArrayList<Rule> rules;
-    private Stack<Integer> parsStack;
+    private final ArrayList<Rule> rules;
+    private final Stack<Integer> parsStack;
     private ParseTable parseTable;
-    private lexicalAnalyzer lexicalAnalyzer;
-    private CodeGenerator cg;
+    private final CodeGeneratorFacade codeGeneratorFacade;
 
     public Parser() {
         parsStack = new Stack<Integer>();
@@ -35,11 +34,11 @@ public class Parser {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        cg = new CodeGenerator();
+        codeGeneratorFacade = new CodeGeneratorFacade();
     }
 
     public void startParse(java.util.Scanner sc) {
-        lexicalAnalyzer = new lexicalAnalyzer(sc);
+        scanner.lexicalAnalyzer lexicalAnalyzer = new lexicalAnalyzer(sc);
         Token lookAhead = lexicalAnalyzer.getNextToken();
         boolean finish = false;
         Action currentAction;
@@ -69,7 +68,7 @@ public class Parser {
                         Log.print(/*"new State : " + */parsStack.peek() + "");
 //                        Log.print("");
                         try {
-                            cg.semanticFunction(rule.semanticAction, lookAhead);
+                            codeGeneratorFacade.semanticFunction(rule.semanticAction, lookAhead);
                         } catch (Exception e) {
                             Log.print("Code Genetator Error");
                         }
@@ -79,8 +78,8 @@ public class Parser {
                         break;
                 }
                 Log.print("");
-            } catch (Exception ignored) {
-                ignored.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
 //                boolean find = false;
 //                for (NonTerminal t : NonTerminal.values()) {
 //                    if (parseTable.getGotoTable(parsStack.peek(), t) != -1) {
@@ -98,6 +97,6 @@ public class Parser {
 //                    parsStack.pop();
             }
         }
-        if (!ErrorHandler.hasError) cg.printMemory();
+        if (!ErrorHandler.hasError) codeGeneratorFacade.printMemory();
     }
 }
