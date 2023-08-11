@@ -27,3 +27,18 @@
 <img width="1339" alt="Screenshot 1402-05-20 at 18 48 50" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/b8b8c342-9cd0-4f83-8f1a-b8daa217fedb">
 
 <img width="1343" alt="Screenshot 1402-05-20 at 18 49 06" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/15def6bb-12c6-4b0b-9743-0022792cedd4">
+
+## استفاده از Polymorphism به جای شرط:
+داشتن switch-caseها در کد جزو مواردی است که باید بازآرایی شود. این هنگامی رخ می‌دهد که ما یک شرطی داریم که بسته به نوع شی یا خصوصیات، اعمال مختلفی را انجام می دهد. برای اصلاح آن باید کلاس‌های فرعی مطابق با شاخه‌های شرطی ایجاد کنیم. در آن‌ها یک متد اشتراکی ایجاد کنیم و کد را از شاخه مربوط به شرط به آن منتقل کنیم. سپس شرط را با فراخوانی متد مربوطه جایگزین کنیم. در فایل Address.java یک نمونه از این کار با ساختن یک اینترفیس به نام TypeAddress صورت گرفته است:
+
+<img width="1360" alt="Screenshot 1402-05-20 at 20 19 47" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/904df9cb-e725-488f-8cb9-8a56b47b7079">
+
+<img width="1357" alt="Screenshot 1402-05-20 at 20 20 05" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/b7d7467c-edfa-4d9b-a598-d05bf18ba6b3">
+
+<img width="1357" alt="Screenshot 1402-05-20 at 20 20 13" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/c3fb87cc-670b-4d17-aea5-645aefa961f7">
+
+<img width="1356" alt="Screenshot 1402-05-20 at 20 20 19" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/926378b5-3fa7-4986-b4e6-0392b809e2b3">
+
+<img width="1351" alt="Screenshot 1402-05-20 at 20 20 40" src="https://github.com/fatemeh-asgari/SELab4/assets/59364998/8e882470-7212-42dd-9814-d1e15407c4c0">
+
+سپس در فایل‌های دیگر هم تغییرات لازم اعمال شده است:
